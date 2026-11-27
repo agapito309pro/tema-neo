@@ -1,8 +1,9 @@
-// Neon Eclipse · tema cyberpunk para Kino (apiVersion 18)
+// Neon Eclipse · tema cyberpunk para Kino (apiVersion 26)
 const THEMES = [
   { id: "neon-eclipse-horizon", es: "Horizonte Neón", en: "Neon Horizon" },
   { id: "neon-eclipse-magenta-grid", es: "Pulso Magenta", en: "Magenta Pulse" },
   { id: "neon-eclipse-cyber-cyan", es: "Ciber Cian", en: "Cyber Cyan" },
+  { id: "neon-eclipse-wallpaper", es: "Eclipse Urbano (Fondo)", en: "Urban Eclipse (Wallpaper)" },
 ];
 
 export async function screen({ activeTheme }) {
@@ -30,8 +31,8 @@ export async function screen({ activeTheme }) {
           { type: "Text", text: "Neon Eclipse", textEn: "Neon Eclipse", style: "h1" },
           {
             type: "Text",
-            text: "Horizonte urbano neón rosa-magenta y cian con tres variantes y logotipo vectorial KINO.",
-            textEn: "Neon pink-magenta and cyan city skyline with three variants and KINO vector logo.",
+            text: "Horizonte urbano neón rosa-magenta y cian con cuatro variantes (incluyendo fondo de pantalla) y logotipo vectorial KINO.",
+            textEn: "Neon pink-magenta and cyan city skyline with four variants (including wallpaper) and KINO vector logo.",
             style: "caption",
             color: "muted",
           },
@@ -43,8 +44,8 @@ export async function screen({ activeTheme }) {
             children: [
               {
                 type: "Text",
-                text: "Cada tema transforma el logotipo junto a KINO y cambia colores, bordes, forma de los botones y transiciones.",
-                textEn: "Each theme transforms the logo next to KINO and changes colors, borders, button shape and transitions.",
+                text: "Cada tema transforma el logotipo junto a KINO y cambia colores, bordes, forma de los botones y fondo.",
+                textEn: "Each theme transforms the logo next to KINO and changes colors, borders, button shape and background.",
               },
             ],
           },
