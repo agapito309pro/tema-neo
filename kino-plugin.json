@@ -1,10 +1,10 @@
 {
   "id": "theme-neon-eclipse",
   "name": "Neon Eclipse",
-  "version": "1.0.1",
-  "apiVersion": 24,
+  "version": "1.0.2",
+  "apiVersion": 26,
   "entry": "plugin.js",
-  "description": "Tema cyberpunk oscuro inspirado en un horizonte urbano nocturno con anillo neón rosa-magenta, destellos cian y logotipo vectorial KINO.",
+  "description": "Tema cyberpunk oscuro para Kino inspirado en un horizonte urbano nocturno con anillo neón rosa-magenta, destellos cian y logotipo vectorial KINO.",
   "author": "agapito309pro",
   "creator": "agapito309pro",
   "homepage": "https://github.com/agapito309pro/tema-neo",
@@ -12,14 +12,6 @@
   "hosts": [],
   "categories": [
     "themes"
-  ],
-  "assets": [
-    {
-      "id": "background",
-      "path": "assets/background.png",
-      "sha256": "59fd6de3f021b269d4b27eb754beb18bb72adf5cf8c2d7db35ffb64809516cab",
-      "bytes": 865385
-    }
   ],
   "appThemes": [
     {
@@ -93,55 +85,61 @@
       },
       "logo": {
         "wordmark": {
-          "size": [196, 48],
+          "size": [
+            184,
+            48
+          ],
           "paths": [
             {
-              "d": "M12 6 L34 6 L42 14 L42 34 L34 42 L12 42 L4 34 L4 14 Z M14 10 L8 16 L8 32 L14 38 L32 38 L38 32 L38 16 L32 10 Z",
+              "d": "M12 6 L32 6 L40 14 L40 34 L32 42 L12 42 L4 34 L4 14 Z M14 10 L8 16 L8 32 L14 38 L30 38 L36 32 L36 16 L30 10 Z",
               "fill": "accent"
             },
             {
-              "d": "M13 18 L33 18 L36 24 L33 30 L13 30 L10 24 Z",
+              "d": "M12 18 L32 18 L35 24 L32 30 L12 30 L9 24 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M17 21 L29 21 L31 24 L29 27 L17 27 L15 24 Z M2 22 L6 22 L6 26 L2 26 Z M40 22 L44 22 L44 26 L40 26 Z M21 2 L25 2 L25 6 L21 6 Z M21 42 L25 42 L25 46 L21 46 Z",
+              "d": "M16 21 L28 21 L30 24 L28 27 L16 27 L14 24 Z M2 22 L6 22 L6 26 L2 26 Z M38 22 L42 22 L42 26 L38 26 Z M20 2 L24 2 L24 6 L20 6 Z M20 42 L24 42 L24 46 L20 46 Z",
               "fill": "#10071C"
             },
             {
-              "d": "M54 10 H62 V21 L73 10 H83 L70 23 L84 38 H73 L62 26 V38 H54 Z",
+              "d": "M50 10 H58 V21 L69 10 H79 L66 23 L80 38 H69 L58 26 V38 H50 Z",
               "fill": "accent"
             },
             {
-              "d": "M90 10 H98 V38 H90 Z M90 6 H98 V8 H90 Z",
+              "d": "M86 14 H94 V38 H86 Z M86 8 H94 V12 H86 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M107 10 H115 L127 26 V10 H135 V38 H127 L115 22 V38 H107 Z",
+              "d": "M102 10 H110 L122 26 V10 H130 V38 H122 L110 22 V38 H102 Z",
               "fill": "textPrimary"
             },
             {
-              "d": "M149 10 H173 L179 16 V32 L173 38 H149 L143 32 V16 Z M152 16 V32 H170 V16 Z",
+              "d": "M144 10 H168 L174 16 V32 L168 38 H144 L138 32 V16 Z M147 16 V32 H165 V16 Z",
               "fill": "textPrimary"
             },
             {
-              "d": "M156 21 H166 V27 H156 Z M143 8 H155 V10 H143 Z M167 38 H179 V40 H167 Z",
+              "d": "M151 21 H161 V27 H151 Z M138 6 H152 V8 H138 Z M162 40 H174 V42 H162 Z",
               "fill": "accent"
             }
           ]
         },
         "mark": {
-          "size": [80, 80],
+          "size": [
+            80,
+            96
+          ],
           "paths": [
             {
-              "d": "M22 8 L58 8 L72 22 L72 58 L58 72 L22 72 L8 58 L8 22 Z M25 14 L14 25 L14 55 L25 66 L55 66 L66 55 L66 25 L55 14 Z",
+              "d": "M22 16 L58 16 L72 30 L72 66 L58 80 L22 80 L8 66 L8 30 Z M25 22 L14 33 L14 63 L25 74 L55 74 L66 63 L66 33 L55 22 Z",
               "fill": "accent"
             },
             {
-              "d": "M22 30 L58 30 L64 40 L58 50 L22 50 L16 40 Z",
+              "d": "M22 38 L58 38 L64 48 L58 58 L22 58 L16 48 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M28 35 L52 35 L55 40 L52 45 L28 45 L25 40 Z M4 37 L10 37 L10 43 L4 43 Z M70 37 L76 37 L76 43 L70 43 Z M37 4 L43 4 L43 10 L37 10 Z M37 70 L43 70 L43 76 L37 76 Z",
+              "d": "M28 43 L52 43 L55 48 L52 53 L28 53 L25 48 Z M4 45 L10 45 L10 51 L4 51 Z M70 45 L76 45 L76 51 L70 51 Z M37 10 L43 10 L43 18 L37 18 Z M37 78 L43 78 L43 86 L37 86 Z",
               "fill": "#10071C"
             }
           ]
@@ -151,30 +149,108 @@
       "experience": "full",
       "adjustable": {
         "colors.accent": {
-          "swatches": ["#FF2A85", "#FF4DA6", "#FF6EC7", "#5CE1E6", "#29B6F6", "#A855F7", "#C084FC"]
+          "swatches": [
+            "#FF2A85",
+            "#FF4DA6",
+            "#FF6EC7",
+            "#D92679",
+            "#B81D8A",
+            "#5CE1E6",
+            "#29B6F6",
+            "#A855F7",
+            "#C084FC",
+            "#F472B6"
+          ]
         },
         "colors.surface": {
-          "swatches": ["#1B0E2E", "#140924", "#24123D", "#10071C", "#2E164A"]
+          "swatches": [
+            "#1B0E2E",
+            "#140924",
+            "#24123D",
+            "#10071C",
+            "#2E164A",
+            "#1C1033",
+            "#2A0F35",
+            "#151936",
+            "#211338",
+            "#341652"
+          ]
         },
         "colors.surfaceHigh": {
-          "swatches": ["#291544", "#24123D", "#351B57", "#3E1E63", "#2E164A"]
+          "swatches": [
+            "#291544",
+            "#24123D",
+            "#351B57",
+            "#3E1E63",
+            "#2E164A",
+            "#222A4E",
+            "#3A1447",
+            "#45216E"
+          ]
         },
-        "shape.cardRadius": { "min": 4, "max": 28 },
-        "shape.buttonRadius": { "min": 8, "max": 28 },
-        "shape.dialogRadius": { "min": 8, "max": 28 },
-        "shape.chipRadius": { "min": 4, "max": 24 },
-        "typography.scale": { "min": 0.9, "max": 1.25 },
-        "typography.titleScale": { "min": 0.95, "max": 1.2 },
-        "player.buttonScale": { "min": 0.9, "max": 1.3 },
-        "player.playButtonScale": { "min": 0.9, "max": 1.4 },
-        "player.seekBarScale": { "min": 0.9, "max": 1.6 },
-        "motion.focusZoom": { "min": 1, "max": 1.12 },
-        "elevation.cardShadow": { "min": 0, "max": 0.8 },
+        "shape.cardRadius": {
+          "min": 4,
+          "max": 28
+        },
+        "shape.buttonRadius": {
+          "min": 8,
+          "max": 28
+        },
+        "shape.dialogRadius": {
+          "min": 8,
+          "max": 28
+        },
+        "shape.chipRadius": {
+          "min": 4,
+          "max": 24
+        },
+        "typography.scale": {
+          "min": 0.9,
+          "max": 1.25
+        },
+        "typography.titleScale": {
+          "min": 0.95,
+          "max": 1.2
+        },
+        "player.buttonScale": {
+          "min": 0.9,
+          "max": 1.3
+        },
+        "player.playButtonScale": {
+          "min": 0.9,
+          "max": 1.4
+        },
+        "player.seekBarScale": {
+          "min": 0.9,
+          "max": 1.6
+        },
+        "motion.focusZoom": {
+          "min": 1,
+          "max": 1.12
+        },
+        "elevation.cardShadow": {
+          "min": 0,
+          "max": 0.8
+        },
         "background": true,
         "colors.favorite": {
-          "swatches": ["#FF6EC7", "#FF2A85", "#5CE1E6", "#C084FC"]
+          "swatches": [
+            "#FF6EC7",
+            "#FF2A85",
+            "#F472B6",
+            "#5CE1E6",
+            "#C084FC"
+          ]
         }
-      }
+      },
+      "assets": [
+        {
+          "id": "background",
+          "path": "assets/background.png",
+          "sha256": "59fd6de3f021b269d4b27eb754beb18bb72adf5cf8c2d7db35ffb64809516cab",
+          "bytes": 865385
+        }
+      ]
     },
     {
       "id": "neon-eclipse-gradient",
@@ -205,7 +281,13 @@
       },
       "background": {
         "type": "gradient",
-        "colors": ["#090312", "#1A082E", "#3B0E47", "#1A082E", "#090312"],
+        "colors": [
+          "#090312",
+          "#1A082E",
+          "#3B0E47",
+          "#1A082E",
+          "#090312"
+        ],
         "angle": 165
       },
       "shape": {
@@ -245,56 +327,62 @@
       },
       "logo": {
         "wordmark": {
-          "size": [196, 48],
+          "size": [
+            184,
+            48
+          ],
           "paths": [
             {
-              "d": "M12 6 L34 6 L42 14 L42 34 L34 42 L12 42 L4 34 L4 14 Z M14 10 L8 16 L8 32 L14 38 L32 38 L38 32 L38 16 L32 10 Z",
+              "d": "M12 6 L32 6 L40 14 L40 34 L32 42 L12 42 L4 34 L4 14 Z M14 10 L8 16 L8 32 L14 38 L30 38 L36 32 L36 16 L30 10 Z",
               "fill": "accent"
             },
             {
-              "d": "M13 18 L33 18 L36 24 L33 30 L13 30 L10 24 Z",
+              "d": "M12 18 L32 18 L35 24 L32 30 L12 30 L9 24 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M17 21 L29 21 L31 24 L29 27 L17 27 L15 24 Z M2 22 L6 22 L6 26 L2 26 Z M40 22 L44 22 L44 26 L40 26 Z M21 2 L25 2 L25 6 L21 6 Z M21 42 L25 42 L25 46 L21 46 Z",
-              "fill": "#090312"
+              "d": "M16 21 L28 21 L30 24 L28 27 L16 27 L14 24 Z M2 22 L6 22 L6 26 L2 26 Z M38 22 L42 22 L42 26 L38 26 Z M20 2 L24 2 L24 6 L20 6 Z M20 42 L24 42 L24 46 L20 46 Z",
+              "fill": "#10071C"
             },
             {
-              "d": "M54 10 H62 V21 L73 10 H83 L70 23 L84 38 H73 L62 26 V38 H54 Z",
+              "d": "M50 10 H58 V21 L69 10 H79 L66 23 L80 38 H69 L58 26 V38 H50 Z",
               "fill": "accent"
             },
             {
-              "d": "M90 10 H98 V38 H90 Z M90 6 H98 V8 H90 Z",
+              "d": "M86 14 H94 V38 H86 Z M86 8 H94 V12 H86 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M107 10 H115 L127 26 V10 H135 V38 H127 L115 22 V38 H107 Z",
+              "d": "M102 10 H110 L122 26 V10 H130 V38 H122 L110 22 V38 H102 Z",
               "fill": "textPrimary"
             },
             {
-              "d": "M149 10 H173 L179 16 V32 L173 38 H149 L143 32 V16 Z M152 16 V32 H170 V16 Z",
+              "d": "M144 10 H168 L174 16 V32 L168 38 H144 L138 32 V16 Z M147 16 V32 H165 V16 Z",
               "fill": "textPrimary"
             },
             {
-              "d": "M156 21 H166 V27 H156 Z M143 8 H155 V10 H143 Z M167 38 H179 V40 H167 Z",
+              "d": "M151 21 H161 V27 H151 Z M138 6 H152 V8 H138 Z M162 40 H174 V42 H162 Z",
               "fill": "accent"
             }
           ]
         },
         "mark": {
-          "size": [80, 80],
+          "size": [
+            80,
+            96
+          ],
           "paths": [
             {
-              "d": "M22 8 L58 8 L72 22 L72 58 L58 72 L22 72 L8 58 L8 22 Z M25 14 L14 25 L14 55 L25 66 L55 66 L66 55 L66 25 L55 14 Z",
+              "d": "M22 16 L58 16 L72 30 L72 66 L58 80 L22 80 L8 66 L8 30 Z M25 22 L14 33 L14 63 L25 74 L55 74 L66 63 L66 33 L55 22 Z",
               "fill": "accent"
             },
             {
-              "d": "M22 30 L58 30 L64 40 L58 50 L22 50 L16 40 Z",
+              "d": "M22 38 L58 38 L64 48 L58 58 L22 58 L16 48 Z",
               "fill": "#5CE1E6"
             },
             {
-              "d": "M28 35 L52 35 L55 40 L52 45 L28 45 L25 40 Z M4 37 L10 37 L10 43 L4 43 Z M70 37 L76 37 L76 43 L70 43 Z M37 4 L43 4 L43 10 L37 10 Z M37 70 L43 70 L43 76 L37 76 Z",
-              "fill": "#090312"
+              "d": "M28 43 L52 43 L55 48 L52 53 L28 53 L25 48 Z M4 45 L10 45 L10 51 L4 51 Z M70 45 L76 45 L76 51 L70 51 Z M37 10 L43 10 L43 18 L37 18 Z M37 78 L43 78 L43 86 L37 86 Z",
+              "fill": "#10071C"
             }
           ]
         }
@@ -303,28 +391,96 @@
       "experience": "full",
       "adjustable": {
         "colors.accent": {
-          "swatches": ["#FF2A85", "#FF4DA6", "#FF6EC7", "#5CE1E6", "#29B6F6", "#A855F7", "#C084FC"]
+          "swatches": [
+            "#FF2A85",
+            "#FF4DA6",
+            "#FF6EC7",
+            "#D92679",
+            "#B81D8A",
+            "#5CE1E6",
+            "#29B6F6",
+            "#A855F7",
+            "#C084FC",
+            "#F472B6"
+          ]
         },
         "colors.surface": {
-          "swatches": ["#130824", "#090312", "#190B2E", "#1E0E36", "#0E061B"]
+          "swatches": [
+            "#130824",
+            "#090312",
+            "#190B2E",
+            "#1E0E36",
+            "#0E061B",
+            "#150A28",
+            "#220D38",
+            "#120C24"
+          ]
         },
         "colors.surfaceHigh": {
-          "swatches": ["#1E0E36", "#190B2E", "#271245", "#150A28", "#2E144F"]
+          "swatches": [
+            "#1E0E36",
+            "#190B2E",
+            "#271245",
+            "#150A28",
+            "#2E144F",
+            "#22163E",
+            "#351654",
+            "#3D195C"
+          ]
         },
-        "shape.cardRadius": { "min": 4, "max": 28 },
-        "shape.buttonRadius": { "min": 8, "max": 28 },
-        "shape.dialogRadius": { "min": 8, "max": 28 },
-        "shape.chipRadius": { "min": 4, "max": 24 },
-        "typography.scale": { "min": 0.9, "max": 1.25 },
-        "typography.titleScale": { "min": 0.95, "max": 1.2 },
-        "player.buttonScale": { "min": 0.9, "max": 1.3 },
-        "player.playButtonScale": { "min": 0.9, "max": 1.4 },
-        "player.seekBarScale": { "min": 0.9, "max": 1.6 },
-        "motion.focusZoom": { "min": 1, "max": 1.12 },
-        "elevation.cardShadow": { "min": 0, "max": 0.8 },
+        "shape.cardRadius": {
+          "min": 4,
+          "max": 28
+        },
+        "shape.buttonRadius": {
+          "min": 8,
+          "max": 28
+        },
+        "shape.dialogRadius": {
+          "min": 8,
+          "max": 28
+        },
+        "shape.chipRadius": {
+          "min": 4,
+          "max": 24
+        },
+        "typography.scale": {
+          "min": 0.9,
+          "max": 1.25
+        },
+        "typography.titleScale": {
+          "min": 0.95,
+          "max": 1.2
+        },
+        "player.buttonScale": {
+          "min": 0.9,
+          "max": 1.3
+        },
+        "player.playButtonScale": {
+          "min": 0.9,
+          "max": 1.4
+        },
+        "player.seekBarScale": {
+          "min": 0.9,
+          "max": 1.6
+        },
+        "motion.focusZoom": {
+          "min": 1,
+          "max": 1.12
+        },
+        "elevation.cardShadow": {
+          "min": 0,
+          "max": 0.8
+        },
         "background": true,
         "colors.favorite": {
-          "swatches": ["#FF6EC7", "#FF2A85", "#5CE1E6", "#C084FC"]
+          "swatches": [
+            "#FF6EC7",
+            "#FF2A85",
+            "#F472B6",
+            "#5CE1E6",
+            "#C084FC"
+          ]
         }
       }
     }
