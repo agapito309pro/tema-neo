@@ -1,31 +1,26 @@
-# Tema Neon Eclipse (Cyberpunk) para Kino
+# Neon Eclipse · tema cyberpunk para Kino
 
-Tema oscuro cyberpunk (`apiVersion: 26`) inspirado en un horizonte urbano nocturno con anillo neón rosa-magenta, destellos cian, logotipo vectorial **KINO** y pantalla de presentación interactiva para elegir variantes.
+Tema para **toda la app** de Kino (celular, escritorio y TV) inspirado en el horizonte urbano nocturno con anillo neón rosa-magenta y destellos cian, construido replicando la arquitectura multiplataforma de `Ben10` (`apiVersion` 18, `capabilities: ["screen"]`, `screen` + `screenEvent` y `go.useTheme`).
 
-**Versión actual: 1.1.1** — optimizado por debajo de **16 KB** en `kino-plugin.json` y compatible con **Kino 0.9.87 o posterior** (Android y Windows).
+No usa la red (`"hosts": []`) y no pide permisos. Guía oficial: <https://kinotvapp.github.io/kino-plugins/themes/>
+
+> Requiere **Kino 0.9.81 o posterior** (`apiVersion` 18).
+
+## Las tres variantes
+
+| id | Nombre | Emblema | Acento | Fondo / Carácter |
+|---|---|---|---|---|
+| `neon-eclipse-horizon` | Horizonte Neón | visor hexagonal cyberpunk | rosa neón `#FF2A85` | imagen de fondo `assets/background.png` (`dim: 0.55`), bordes suaves, fundido de 200 ms |
+| `neon-eclipse-magenta-grid` | Pulso Magenta | prisma / cuchilla ciber | magenta `#FF4DA6` | degradado oscuro `#090212` → `#260838`, bordes de 2 dp, experiencia ligera |
+| `neon-eclipse-cyber-cyan` | Ciber Cian | nodo / rejilla ciber | cian `#5CE1E6` | degradado nocturno `#040A14` → `#0C223D`, cortes rápidos de 80 ms, experiencia ligera |
+
+## Qué hay en cada parte
+
+- **Logo.** `logo.wordmark` muestra el emblema cyberpunk a la izquierda y **KINO** en bloques con esquinas cortadas a la derecha. `logo.mark` muestra solo el emblema. El emblema usa `accent` y el núcleo/texto usa `textPrimary`.
+- **Pantalla de presentación.** `plugin.js` exporta `screen` y `screenEvent` con un botón por tema (`go.useTheme`), accesible desde la pestaña de ajustes del plugin con **Ver presentación** y alternando entre activar y desactivar según `activeTheme`.
+- **Fondo y ajustes.** Incluye `assets/background.png` en `appThemes[0].assets` con su `sha256` y tamaño en bytes verificados, manteniendo el manifiesto en unos 9 KB (por debajo del límite de 16 KB).
 
 ## Instalación
 
-1. Sube todos los archivos de este paquete a la raíz de tu repositorio `https://github.com/agapito309pro/tema-neo` reemplazando los anteriores (incluyendo `assets/background.png` para conservar su `sha256` exacto).
-2. En Kino, ve a **Ajustes ▸ Plugins** y escribe:
-   ```
-   agapito309pro/tema-neo
-   ```
-3. Abre **Neon Eclipse** desde el menú de plugins para usar la pantalla de presentación y elegir una variante, o selecciona el tema directamente en **Ajustes ▸ Apariencia**.
-
-## Variantes incluidas
-
-- **Neon Eclipse**: fondo urbano nocturno (`assets/background.png`, `fit: "cover"`, `dim: 0.5`) con superficies violeta oscuro y acento rosa neón (`#FF2A85`).
-- **Neon Eclipse (Degradado)**: degradado púrpura profundo (`#090312` → `#3B0E47` → `#090312`) sin depender de imagen externa.
-- **Neon Eclipse (Cyber Cian)**: estética cian eléctrico (`#5CE1E6`) sobre azul nocturno con detalles magenta.
-
-## Pantalla de presentación y personalización
-
-- **Selector interactivo (`plugin.js`)**: muestra un hero de presentación cyberpunk y tarjetas para previsualizar y activar cada variante.
-- **Logotipo vectorial KINO**: emblema hexagonal neón con visor cian y tipografía angular cyberpunk integrado en `wordmark` y `mark`.
-- **Ajustes ▸ Apariencia ▸ Personalizar**: permite modificar acentos, superficies, favoritos, radios de tarjetas/botones, escalas de texto, reproductor y zoom de foco.
-
-## Autor
-
-- **author**: agapito309pro
-- **homepage**: https://github.com/agapito309pro/tema-neo
+1. Sube `kino-plugin.json`, `plugin.js`, `README.md`, `icon.png` y la carpeta `assets/` a `https://github.com/agapito309pro/tema-neo`.
+2. En Kino, ve a **Ajustes ▸ Plugins**, instala `agapito309pro/tema-neo` y ábrelo para usar la pantalla de presentación o elige el tema en **Ajustes ▸ Apariencia**.

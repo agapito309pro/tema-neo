@@ -1,94 +1,73 @@
-// Neon Eclipse — Selector de Temas Cyberpunk para Kino (Android & Windows)
+// Neon Eclipse · tema cyberpunk para Kino (apiVersion 18)
+//
+// Los temas viven como datos en kino-plugin.json (appThemes): no corren código,
+// no usan la red y no piden permisos. Este archivo dibuja una pantalla de
+// presentación con un botón por variante (go.useTheme). Ajustes ▸ Apariencia
+// sigue siendo la vía principal para activarlos.
+
 const THEMES = [
-  {
-    id: "neon-eclipse",
-    title: "Neon Eclipse (Fondo Urbano)",
-    subtitle: "Horizonte nocturno con anillo neón rosa-magenta (#FF2A85) y fondo personalizado.",
-    accent: "#FF2A85",
-    secondary: "#5CE1E6",
-    badge: "IMAGEN + NEÓN"
-  },
-  {
-    id: "neon-eclipse-gradient",
-    title: "Neon Eclipse (Degradado)",
-    subtitle: "Degradado púrpura profundo (#090312 → #3B0E47), ligero y sin imagen externa.",
-    accent: "#D92679",
-    secondary: "#C084FC",
-    badge: "DEGRADADO"
-  },
-  {
-    id: "neon-eclipse-cyber-cyan",
-    title: "Neon Eclipse (Cyber Cian)",
-    subtitle: "Estética cian eléctrico (#5CE1E6) con contraste azul nocturno y detalles magenta.",
-    accent: "#5CE1E6",
-    secondary: "#FF2A85",
-    badge: "CYBER CIAN"
-  }
+  { id: "neon-eclipse-horizon", es: "Horizonte Neón", en: "Neon Horizon" },
+  { id: "neon-eclipse-magenta-grid", es: "Pulso Magenta", en: "Magenta Pulse" },
+  { id: "neon-eclipse-cyber-cyan", es: "Ciber Cian", en: "Cyber Cyan" },
 ];
 
-function buildThemeCard(theme) {
+export async function screen({ activeTheme }) {
+  const buttons = THEMES.map((t) => {
+    const on = activeTheme === t.id;
+    return {
+      type: "ElevatedButton",
+      key: "theme-" + t.id,
+      icon: on ? "check" : "bolt",
+      labelText: on ? t.es + " · activo (desactivar)" : "Activar " + t.es,
+      labelTextEn: on ? t.en + " · on (turn off)" : "Activate " + t.en,
+      onPressed: { go: { useTheme: { theme: on ? null : t.id } } },
+    };
+  });
+
   return {
-    id: `theme-card:${theme.id}`,
-    title: theme.title,
-    subtitle: `${theme.badge} · ${theme.subtitle}`,
-    description: `${theme.subtitle}\n\nPulsa para aplicar este tema en Kino (o selecciónalo en Ajustes ▸ Apariencia).`,
-    type: "movie",
-    action: {
-      type: "applyTheme",
-      themeId: theme.id
-    }
+    type: "SingleChildScrollView",
+    children: [
+      {
+        type: "Column",
+        padding: 16,
+        gap: 12,
+        children: [
+          { type: "Badge", text: "TEMA CYBERPUNK · KINO", textEn: "CYBERPUNK THEME · KINO", color: "primary" },
+          { type: "Text", text: "Modo Neon Eclipse activado", textEn: "Neon Eclipse mode ready", style: "h1" },
+          {
+            type: "Text",
+            text: "Horizonte urbano neón rosa-magenta y cian con tres variantes y logotipo vectorial KINO.",
+            textEn: "Neon pink-magenta and cyan city skyline with three variants and KINO vector logo.",
+            style: "caption",
+            color: "muted",
+          },
+          { type: "Divider" },
+          {
+            type: "Card",
+            variant: "outlined",
+            key: "about",
+            children: [
+              {
+                type: "Text",
+                text: "Cada variante ajusta el emblema cyberpunk junto al texto KINO, los colores, los bordes, la forma de los botones y el fondo.",
+                textEn: "Each variant updates the cyberpunk emblem next to KINO text, colors, borders, button shape and background.",
+              },
+            ],
+          },
+          { type: "Column", gap: 8, crossAxisAlignment: "stretch", children: buttons },
+          {
+            type: "Text",
+            text: "También puedes cambiarlo en Ajustes ▸ Apariencia. Usa el fondo del horizonte neón o las variantes con degradado.",
+            textEn: "You can also switch it in Settings ▸ Appearance. Use the neon horizon image or gradient variants.",
+            style: "caption",
+            color: "muted",
+          },
+        ],
+      },
+    ],
   };
 }
 
-const plugin = {
-  id: "theme-neon-eclipse",
-  name: "Neon Eclipse",
-
-  async getHome() {
-    return {
-      hero: {
-        id: "hero:neon-eclipse",
-        title: "NEON ECLIPSE // CYBERPUNK",
-        subtitle: "Selecciona una variante visual para transformar la interfaz de Kino",
-        description:
-          "Elige entre el tema con fondo urbano nocturno, el degradado púrpura o la edición Cyber Cian. Compatible con Android y Windows.",
-        action: {
-          type: "applyTheme",
-          themeId: "neon-eclipse"
-        }
-      },
-      sections: [
-        {
-          id: "section:cyberpunk-themes",
-          title: "Selector de Temas Cyberpunk",
-          items: THEMES.map(buildThemeCard)
-        }
-      ]
-    };
-  },
-
-  async onAction(action, ctx) {
-    if (!action || action.type !== "applyTheme") return null;
-    const chosen = THEMES.find((t) => t.id === action.themeId) || THEMES[0];
-
-    try {
-      if (ctx && typeof ctx.setAppTheme === "function") {
-        await ctx.setAppTheme(chosen.id);
-      } else if (ctx && ctx.app && typeof ctx.app.setTheme === "function") {
-        await ctx.app.setTheme(chosen.id);
-      } else if (ctx && ctx.ui && typeof ctx.ui.setAppTheme === "function") {
-        await ctx.ui.setAppTheme(chosen.id);
-      }
-    } catch (_) {
-      // Fallback: Kino aplica el tema desde Ajustes -> Apariencia
-    }
-
-    return {
-      type: "message",
-      title: `Tema activado: ${chosen.title}`,
-      message: `Se seleccionó "${chosen.title}" (${chosen.id}). Si en Windows no cambia automáticamente, ve a Ajustes ▸ Apariencia y elige "${chosen.title}".`
-    };
-  }
-};
-
-export default plugin;
+export async function screenEvent() {
+  return null;
+}
