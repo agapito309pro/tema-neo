@@ -1,10 +1,4 @@
 // Neon Eclipse · tema cyberpunk para Kino (apiVersion 18)
-//
-// Los temas viven como datos en kino-plugin.json (appThemes): no corren código,
-// no usan la red y no piden permisos. Este archivo dibuja una pantalla de
-// presentación con un botón por variante (go.useTheme). Ajustes ▸ Apariencia
-// sigue siendo la vía principal para activarlos.
-
 const THEMES = [
   { id: "neon-eclipse-horizon", es: "Horizonte Neón", en: "Neon Horizon" },
   { id: "neon-eclipse-magenta-grid", es: "Pulso Magenta", en: "Magenta Pulse" },
@@ -57,8 +51,8 @@ export async function screen({ activeTheme }) {
           { type: "Column", gap: 8, crossAxisAlignment: "stretch", children: buttons },
           {
             type: "Text",
-            text: "También puedes cambiarlo en Ajustes ▸ Apariencia. Usa el fondo del horizonte neón o las variantes con degradado.",
-            textEn: "You can also switch it in Settings ▸ Appearance. Use the neon horizon image or gradient variants.",
+            text: "También puedes cambiarlo en Ajustes ▸ Apariencia.",
+            textEn: "You can also switch it in Settings ▸ Appearance.",
             style: "caption",
             color: "muted",
           },
