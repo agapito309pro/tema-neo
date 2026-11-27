@@ -27,7 +27,7 @@ export async function screen({ activeTheme }) {
         gap: 12,
         children: [
           { type: "Badge", text: "TEMA CYBERPUNK · KINO", textEn: "CYBERPUNK THEME · KINO", color: "primary" },
-          { type: "Text", text: "Modo Neon Eclipse activado", textEn: "Neon Eclipse mode ready", style: "h1" },
+          { type: "Text", text: "Neon Eclipse", textEn: "Neon Eclipse", style: "h1" },
           {
             type: "Text",
             text: "Horizonte urbano neón rosa-magenta y cian con tres variantes y logotipo vectorial KINO.",
@@ -43,8 +43,8 @@ export async function screen({ activeTheme }) {
             children: [
               {
                 type: "Text",
-                text: "Cada variante ajusta el emblema cyberpunk junto al texto KINO, los colores, los bordes, la forma de los botones y el fondo.",
-                textEn: "Each variant updates the cyberpunk emblem next to KINO text, colors, borders, button shape and background.",
+                text: "Cada tema transforma el logotipo junto a KINO y cambia colores, bordes, forma de los botones y transiciones.",
+                textEn: "Each theme transforms the logo next to KINO and changes colors, borders, button shape and transitions.",
               },
             ],
           },
